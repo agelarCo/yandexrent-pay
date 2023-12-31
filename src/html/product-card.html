@@ -1,0 +1,66 @@
+<div class="product-card">
+  <div class="product-card__labels product-card-labels">
+    <div
+      class="product-card-labels__label"
+      data-bs-toggle="tooltip"
+      title="Для всех
+    типов тканей"
+    >
+      @@include('./sprite.html', { 'id': 'hren', 'width': '26px', 'height':
+      '26px' })
+    </div>
+    <div class="product-card-labels__label" data-bs-toggle="tooltip"
+    title="Бесплатная
+    доставка">
+      @@include('./sprite.html', { 'id': 'delivery', 'width': '26px', 'height':
+      '26px' })
+    </div>
+    <div class="product-card-labels__label" data-bs-toggle="tooltip"
+    title="Участвует
+    в акции">
+      @@include('./sprite.html', { 'id': 'discount', 'width': '26px', 'height':
+      '26px' })
+    </div>
+    <div class="product-card-labels__label" data-bs-toggle="tooltip"
+    title="Хит продаж">
+      @@include('./sprite.html', { 'id': 'primary', 'width': '26px', 'height':
+      '26px' })
+    </div>
+  </div>
+  <a href="product-page.html" class="product-card__inner-image">
+    <img src="./images/catalog/catalog-image.jpg" alt="" />
+  </a>
+  <div class="product-card__content product-card-content">
+    <a href="product-page.html" class="product-card-content__name">
+      Швейная машина BERNINA B480
+    </a>
+    <div class="product-card-content__block">
+      <div class="mb-15">
+        <span class="product-card-content__acticol">АРТ. 4884562</span>
+        <div class="d-flex gap-5 align-items-center" style="color: #454950">
+          @@include('./sprite.html', { 'id': 'star', 'width': '15px', 'height':
+          '15px' })
+          <span>4,5</span>
+        </div>
+      </div>
+      <div class="align-items-center fs-5 fw-semi-bold position-relative">
+        <span class="position-relative"
+          >269 900 <b>₽</b>
+          <span class="old-price ws-nowrap">269 900 ₽</span></span
+        >
+      </div>
+      <div class="product-card-content__controls">
+        <div class="btn-cart" data-bs-toggle="modal" data-bs-target="#addCart">
+          <div class="btn-cart__icon">
+            @@include('./sprite.html', { 'id': 'bag-card', 'width': '16px',
+            'height': '16px' })
+          </div>
+          <span>В корзину</span>
+        </div>
+        <div class="btn-comparison">
+          <img src="./images/frt.svg" class="frt" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

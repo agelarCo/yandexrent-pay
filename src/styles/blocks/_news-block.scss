@@ -1,0 +1,10 @@
+.news-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px;
+    &__image {
+        height: 200px;
+    }
+}

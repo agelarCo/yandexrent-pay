@@ -1,0 +1,14 @@
+.services-block {
+  display: flex;
+  gap: 15px;
+  &__round {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}

@@ -1,0 +1,15 @@
+.badge {
+    font-weight: 500;
+    border-radius: 12.5px;
+    padding: 1px 10px;
+    line-height: 20px;
+    font-size: 20px;
+    &--one {
+        border: 2px solid #FFFFFF82;
+        color: #FFFFFF82;
+    }
+    &--two {
+        border: 2px solid #1BACE480;
+        color: #1BACE480;
+    }
+}

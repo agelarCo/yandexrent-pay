@@ -1,0 +1,395 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+/* Overraides default values */
+$primary: #e92b66;
+$secondary: #569656;
+$thrity: #f8f9fa;
+$success: #0aa25d;
+$info: #404040;
+$warning: #ffc107;
+$danger: #dc3545;
+$body-bg: white;
+$body-color: #000000;
+$link-color: $secondary;
+$link-color-hover: $primary;
+$opposite: #e6e6e6;
+$muted: #cccccc;
+
+$system-component: #f8f9fa;
+
+$light: #fff;
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "thrity": $thrity,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "body-bg": $body-bg,
+  "body-color": $body-color,
+  "system-component": $system-component,
+  "opposite": $opposite,
+  "muted": $muted
+);
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  xs: 0,
+  ss: 380px,
+  ms: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  bl: 1600px,
+  bxl: 1800px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px,
+  bl: 1440px,
+);
+
+$min-height-sizes: (
+  "50": 50px,
+  "100": 100px,
+  "150": 150px,
+  "170": 170px,
+  "200": 200px,
+  "240": 240px,
+  "290": 290px,
+  "300": 300px,
+  "350": 350px,
+  "400": 400px,
+);
+$grid-gutter-width: 1.5rem;
+
+
+$btn-link-color: $body-color;
+$btn-link-hover-color: $body-color;
+$btn-link-disabled-color: $gray-600;
+
+$btn-padding-y: 15px;
+$btn-padding-x: 30px;
+
+$border-radius: 0.25rem;
+$border-radius-sm: 0.2rem;
+$border-radius-md: 25px;
+$border-radius-lg: 30px;
+$border-radius-xl: 0.7rem;
+$border-radius-xxl: 40px;
+$border-radius-pill: 50rem;
+
+/* =======================FONT======================= */
+
+$font-family-sans-serif: "Manrope";
+$font-weight-base: 500;
+$font-weight-bolder: 800;
+$font-weight-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+
+$h1-font-size: $font-size-base * 2.625;
+$h2-font-size: $font-size-base * 2.125;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$small-custom-font: $font-size-base * 0.875;
+$medium-small-custom-font: $font-size-base * 0.75;
+$extra-small-custom-font: $font-size-base * 0.625;
+$special-size: $font-size-base * 1.375;
+$big-font-size: $font-size-base * 4;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $small-custom-font,
+  8: $medium-small-custom-font,
+  9: $extra-small-custom-font,
+  'spec': 18px,
+  "special-size": $special-size,
+  "big-font": $big-font-size,
+);
+
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+
+$dropdown-link-active-bg:           $primary;
+
+$headings-margin-bottom: 30px;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+
+$max-value-width: 100;
+$begin-width: 0;
+$spread-width: 10;
+
+$max-value-width-percent: 100;
+$begin-width-percent: 0;
+$spread-width-percent: 5;
+
+
+$modal-sm:                          300px;
+$modal-md:                          655px;
+$modal-lg:                          655px;
+$modal-xl:                          1140px;
+
+
+
+// GAP VALUES
+
+$max-gap: 100;
+$begin-gap: 5;
+$spread-gap: 5;
+
+// ROUNDED VALUES
+
+/* $max-gap: 50;
+$begin-gap: 5;
+$spread-gap: 5; */
+
+@function generate-sizes(
+  $max-value-size,
+  $spread-value,
+  $begin-from-iter,
+  $unitType,
+  $auto-flag: false,
+  $none-flag: false,
+  $zero-flag: false
+) {
+  $size-map-cutom: ();
+  @if $auto-flag {
+    $size-map-cutom: map-merge(
+      $size-map-cutom,
+      (
+        "auto": auto,
+      )
+    );
+  }
+  @if $none-flag {
+    $size-map-cutom: map-merge(
+      $size-map-cutom,
+      (
+        "none": none,
+      )
+    );
+  }
+  @if $zero-flag {
+    $size-map-cutom: map-merge(
+      $size-map-cutom,
+      (
+        0: 0,
+      )
+    );
+  }
+  @while $begin-from-iter <= $max-value-size {
+    @if $begin-from-iter % $spread-value == 0 {
+      $size-map-cutom: map-merge(
+        $size-map-cutom,
+        (
+          $begin-from-iter: #{$begin-from-iter}#{$unitType},
+        )
+      );
+    }
+    $begin-from-iter: $begin-from-iter + 1;
+  }
+  @return $size-map-cutom;
+}
+
+/* =======================MARGINS======================= */
+/* generate-sizes(50, 5, 5, "px", true), */
+$spacer: 1rem; /* 16px */
+$spacers: generate-sizes(150, 5, 5, "px", true, true, true);
+
+/* =======================POSITION======================= */
+
+$position-values: generate-sizes(100, 5, 5, "px", true, true, true);
+
+/* =======================COL SPACE======================= */
+
+$gutters: generate-sizes(100, 0, 5, "px", true, true, true);
+
+$utilities: (
+  "rounded": (
+    property: border-radius,
+    class: rounded,
+    responsive: true,
+
+    values:
+      map-merge(
+        (
+          "circle": 50%,
+        ),
+        generate-sizes(50, 5, 5, "px", true)
+      ),
+  ),
+  "font-size": (
+    property: font-size,
+    responsive: true,
+    class: fs,
+    rfs: false,
+    values: $font-sizes,
+  ),
+  "font-weight": (
+    property: font-weight,
+    class: fw,
+    responsive: true,
+
+    values: (
+      light: $font-weight-light,
+      lighter: $font-weight-lighter,
+      normal: $font-weight-normal,
+      medium: $font-weight-medium,
+      bold: $font-weight-bold,
+      semi-bold: $font-weight-semi-bold,
+      bolder: $font-weight-bolder,
+    ),
+  ),
+  "border-bottom": (
+    property: border-bottom,
+    responsive: true,
+    state: hover,
+    values: (
+      null: $border-width solid $border-color,
+      0: 0,
+    ),
+  ),
+  "border-color": (
+    property: border-color,
+    class: border,
+    responsive: true,
+    values:
+      map-merge(
+        $theme-colors,
+        (
+          "white": $white,
+        )
+      ),
+  ),
+  "color": (
+    property: color,
+    class: text,
+    state: hover,
+    responsive: true,
+    values:
+      map-merge(
+        map-merge($theme-colors, $colors),
+        (
+          "reset": inherit,
+        )
+      ),
+  ),
+  "cursor": (
+    property: cursor,
+    values: auto default pointer wait text move help not-allowed,
+  ),
+  "min-height": (
+    property: min-height,
+    class: mh,
+    responsive: true,
+    values: generate-sizes(500, 10, 0, "px", true),
+  ),
+  "max-height": (
+    property: min-height,
+    class: hx,
+    responsive: true,
+    values: generate-sizes(500, 10, 0, "px", true),
+  ),
+  "background-color": (
+    property: background-color,
+    class: bg,
+    responsive: true,
+    state: hover,
+    values:
+      map-merge(
+        map-merge($theme-colors, $colors),
+        (
+          "body": $body-bg,
+          "transparent": transparent,
+        )
+      ),
+  ),
+  "gap": (
+    property: gap,
+    class: gap,
+    responsive: true,
+    values: generate-sizes($max-gap, $begin-gap, $spread-gap, "px", false, true),
+  ),
+  "max-width": (
+    property: max-width,
+    class: mw,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  ),
+  "width": (
+    property: width,
+    class: w,
+    responsive: true,
+    values:
+      generate-sizes(500, 25, 0, "px", true),
+  ),
+  "width percent": (
+    property: width,
+    class: wp,
+    responsive: true,
+    values:
+      generate-sizes(
+        $max-value-width-percent,
+        $spread-width-percent,
+        $begin-width-percent,
+        "%",
+        true
+      ),
+  ),
+  "max width ": (
+    property: width,
+    class: wx,
+    responsive: true,
+    values: generate-sizes(500, 25, 0, "px", true),
+  ),
+);
+
+@import "../../node_modules/bootstrap/scss/utilities/api";

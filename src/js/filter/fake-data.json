@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "count": 2,
+  "link": "http://neweuarasia.webtm.ru/katalog/nerzhaveyushhaya-stal/?filter={\"priceFrom\":[\"*\"],\"priceTo\":[\"*\"]}",
+  "result": [
+    { "id": "18", "published": "1", "parent": "12", "price": "1000.00" },
+    { "id": "62", "published": "1", "parent": "12", "price": "0.00" }
+  ]
+}

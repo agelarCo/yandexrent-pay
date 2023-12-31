@@ -1,0 +1,21 @@
+.description {
+}
+.bounce-block {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+.bounce-block__wrapper {
+    border-radius: 12px;
+    border: 1px solid black;
+}
+.bounce-block__wrapper--content {
+    position: relative;
+    background-color: white;
+    height: 100%;
+}
+.bounce-block__wrapper--decorator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

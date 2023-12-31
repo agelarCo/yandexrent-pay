@@ -1,0 +1,42 @@
+.first-layout {
+    padding-top: 120px;
+    h1 {
+        font-size: 48px;
+        font-weight: 700;
+        span {
+            color: $secondary;
+        }
+    }
+    &__container {
+    }
+}
+
+@media (max-width: 1199px) {
+    .first-layout {
+        h1 {
+            font-size: 170px;
+            span {
+                color: $secondary;
+            }
+        }
+        &__container {
+        }
+    }
+}
+
+ // font-size: calc(100px + 16 * (100vw / 1280)) !important;
+
+
+ @media (max-width: 640px) {
+    .first-layout {
+        padding-top: 110px;
+        h1 {
+            font-size: calc(77px + 16 * (100vw / 1280));
+            span {
+                color: $secondary;
+            }
+        }
+        &__container {
+        }
+    }
+}

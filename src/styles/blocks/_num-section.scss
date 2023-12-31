@@ -1,0 +1,135 @@
+.num-section {
+    margin-bottom: 95px;
+
+    .bounce-block {
+        &__wrapper--decorator {
+            display: none;
+        }
+
+        &__wrapper {
+            border: 0px;
+
+        }
+
+        &__wrapper--content {}
+    }
+}
+
+.num-section-block {
+    text-align: center;
+
+    p {
+        font-family: '5by7';
+        font-size: 160px;
+        font-weight: 400;
+        // line-height: 100%;
+        color: $secondary;
+    }
+
+    span {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 992px) {
+    .num-section {
+        margin-bottom: 45px;
+    }
+
+    .num-section-block {
+        padding-bottom: 30px;
+
+        p {
+
+            line-height: 100%;
+
+        }
+
+        span {}
+    }
+}
+
+@media (max-width: 640px) {
+    .num-section {
+        margin-bottom: 47px;
+
+        .bounce-block {
+            margin-bottom: 40px;
+            padding: 0 6px 8px 0;
+            &__wrapper--decorator {
+                display: block;
+                left: 10px; top: 5px;
+            }
+
+            &__wrapper {
+                border: 1px solid black;
+
+            }
+
+            &__wrapper--content {
+            }
+        }
+    }
+
+    .num-section-block {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 34px 36px;
+
+        p {
+
+            line-height: 100%;
+            font-size: 125px;
+
+        }
+
+        span {
+            font-size: 28px;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .num-section {
+        
+        margin-bottom: 0px;
+        .bounce-block {
+            margin-bottom: 40px;
+            padding: 0 6px 8px 0;
+            &__wrapper--decorator {
+                display: block;
+                left: 10px; top: 5px;
+            }
+
+            &__wrapper {
+                border: 1px solid black;
+
+            }
+
+            &__wrapper--content {
+            }
+        }
+    }
+
+    .num-section-block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        padding: 34px 36px;
+
+        p {
+
+            line-height: 100%;
+            font-size: 125px;
+
+        }
+
+        span {
+            font-size: 28px;
+        }
+    }
+}

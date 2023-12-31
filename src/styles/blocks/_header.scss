@@ -1,0 +1,165 @@
+.header {
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 30px 20px 30px 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 28px !important;
+        padding-right: 17px !important;
+        background-color: white;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    &__logo {
+        img {
+            width: 110px;
+        }
+    }
+
+    &__burger {}
+}
+
+
+.header-nav {
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 50px;
+        margin-bottom: 0;
+
+        a {
+            color: $body-color;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            transition: .3s ease-in;
+        }
+
+        a:hover {
+            transition: .3s ease-in;
+            color: $secondary;
+        }
+    }
+    &__overflow {
+        display: none;
+    }
+}
+
+.header-burger {
+    display: none;
+
+    &__close-icon {}
+
+    &__open-icon {}
+}
+
+
+
+@media (max-width: 992px) {
+    .header {}
+
+    .header-nav {
+        padding: 63px 44px;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        background-color: white;
+        z-index: 100;
+        width: 80vw;
+        height: 100vh;
+        transition: .3s ease;
+
+        // &:before {
+        //     content: "";
+        //     display: block;
+        //     position: fixed;
+        //     z-index: -1;
+        //     background-color: rgba($color: #000000, $alpha: 0.5);
+        //     width: 100vw;
+        //     height: 100vh;
+        //     top: 0;
+        //     left: 0;
+        // }
+        &--open {
+            left: 20vw;
+
+        }
+        &__overflow {
+            display: block;
+            position: fixed;
+            z-index: 90;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: -100%;
+        
+    }
+    &__overflow--open  {
+        left: 0;
+    }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: start;
+            padding: 0;
+            overflow-y: auto;
+            position: relative;
+            z-index: 110;
+            a {
+                color: $secondary;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 55px;
+            }
+        }
+    }
+
+    .header-burger {
+        display: block;
+        position: relative;
+        z-index: 150;
+        transition: .3s ease;
+
+        &__close-icon {
+            display: none;
+        }
+
+        &__open-icon {
+            display: block;
+        }
+
+        &--open {
+            transition: .3s ease;
+            // position: absolute;
+            // top: 73px;
+            // right: 70px;
+        }
+
+        &--open &__close-icon {
+            display: block;
+        }
+
+        &--open &__open-icon {
+            display: none;
+        }
+    }
+
+    .header {
+        
+    }
+
+
+}

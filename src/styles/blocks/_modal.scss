@@ -1,0 +1,52 @@
+.modal .modal-dialog {
+    z-index: 1100;
+}
+
+.form-modal {
+padding: 40px;
+
+    &__title {
+        font-size: 36px;
+        font-family: '5by7';
+        margin-bottom: 40px;
+        color: $secondary;
+        text-decoration: none;
+    }
+
+    &__input {
+        margin-bottom: 40px;
+        border-radius: 15px;
+        border: 1px solid black;
+        padding: 12px 17px;
+        width: 100%;
+        font-size: 20px;
+    }
+    &__input:focus-visible {
+        outline: none;
+    }
+
+    &__input--textarea {
+        height: 190px;
+    }
+
+    &__submit-btn {
+        border: 1px solid black;
+        border-radius: 15px;
+        color: $secondary;
+        text-decoration: none;
+        padding: 17px 50px;
+        font-family: '5by7';
+        font-size: 36px;
+        background: white;
+        text-decoration-color: transparent;
+        transition: .3s ease-in-out;
+    }
+    
+
+    &__submit-btn:hover {
+        transition: .3s ease-in-out;
+        background: #1BACE4;
+        color: white;
+    }
+}
+
