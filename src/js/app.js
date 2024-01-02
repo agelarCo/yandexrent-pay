@@ -19,44 +19,52 @@ let formModalInput = document.querySelectorAll('.form-modal__input[type=text], t
 let overflowMenu = document.querySelector('.header-nav__overflow')
 
 
-formModalSubmitBtn.addEventListener('click', () => {
-  formModalInput.forEach((elem, index) => {
-    elem.value = ''
-    elem.textContent = ''
-  })
-})
 
 
-headerBurger.addEventListener('click', (e) => {
-  headerBurger.classList.toggle('header-burger--open')
-  headerNav.classList.toggle('header-nav--open')
-  overflowMenu.classList.toggle('header-nav__overflow--open')
+fetch('http://api.yandexrent.development/payment/auth').then(data => {
+  console.log(data);
 })
 
 
 
-listLinkNav.forEach((element, index) => {
-  element.addEventListener('click', () => {
-    headerBurger.classList.remove('header-burger--open')
-    headerNav.classList.remove('header-nav--open')
-    overflowMenu.classList.remove('header-nav__overflow--open')
-  })
-});
-
-overflowMenu.addEventListener('click', (e) => {
-  overflowMenu.classList.remove('header-nav__overflow--open')
-  headerBurger.classList.remove('header-burger--open')
-    headerNav.classList.remove('header-nav--open')
-})
+// formModalSubmitBtn.addEventListener('click', () => {
+//   formModalInput.forEach((elem, index) => {
+//     elem.value = ''
+//     elem.textContent = ''
+//   })
+// })
 
 
+// headerBurger.addEventListener('click', (e) => {
+//   headerBurger.classList.toggle('header-burger--open')
+//   headerNav.classList.toggle('header-nav--open')
+//   overflowMenu.classList.toggle('header-nav__overflow--open')
+// })
 
-portfolioBlockEnterBtn.addEventListener("mousedown", () => {
-  portfolioBlockEnterBtn.src = './images/button-down.png' 
-});
-portfolioBlockEnterBtn.addEventListener("mouseup", () => {
-  portfolioBlockEnterBtn.src = './images/button.png'
-});
+
+
+// listLinkNav.forEach((element, index) => {
+//   element.addEventListener('click', () => {
+//     headerBurger.classList.remove('header-burger--open')
+//     headerNav.classList.remove('header-nav--open')
+//     overflowMenu.classList.remove('header-nav__overflow--open')
+//   })
+// });
+
+// overflowMenu.addEventListener('click', (e) => {
+//   overflowMenu.classList.remove('header-nav__overflow--open')
+//   headerBurger.classList.remove('header-burger--open')
+//     headerNav.classList.remove('header-nav--open')
+// })
+
+
+
+// // portfolioBlockEnterBtn.addEventListener("mousedown", () => {
+// //   portfolioBlockEnterBtn.src = './images/button-down.png' 
+// // });
+// // portfolioBlockEnterBtn.addEventListener("mouseup", () => {
+// //   portfolioBlockEnterBtn.src = './images/button.png'
+// // });
 
 
 window["FLS"] = location.hostname === "localhost";

@@ -1,22 +1,11 @@
 .header {
-    overflow-x: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 200;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         // padding: 30px 20px 30px 30px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 28px !important;
-        padding-right: 17px !important;
-        background-color: white;
-        border-radius: 0px 0px 15px 15px;
+        padding: 10px 0;
     }
 
     &__logo {
@@ -40,9 +29,8 @@
         a {
             color: $body-color;
             text-decoration: none;
-            font-size: 20px;
-            font-weight: 500;
-            transition: .3s ease-in;
+            font-size: 14px;
+            text-decoration: underline;
         }
 
         a:hover {
@@ -73,7 +61,7 @@
         position: fixed;
         top: 0;
         left: 100%;
-        background-color: white;
+        background-color: $body-bg;
         z-index: 100;
         width: 80vw;
         height: 100vh;
@@ -119,10 +107,8 @@
             position: relative;
             z-index: 110;
             a {
-                color: $secondary;
                 text-decoration: none;
                 font-weight: 500;
-                font-size: 55px;
             }
         }
     }

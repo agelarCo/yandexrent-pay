@@ -1,33 +1,34 @@
 
 @font-face {
-  font-family: "5by7";
+  font-family: "EuclidCircularB";
   font-weight: 400;
-  src: local("5by7"),
-    url("../fonts/5by7-Regular.woff2") format("woff2"),
-    url("../fonts/5by7-Regular.woff") format("woff");
+  src: local("EuclidCircularB"),
+    url("../fonts/EuclidCircularB-Regular.woff2") format("woff2"),
+    url("../fonts/EuclidCircularB-Regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Manrope";
+  font-family: "EuclidCircularB";
   font-weight: 500;
-  src: local("Manrope-Medium"),
-    url("../fonts/Manrope-Medium.woff2") format("woff2"),
-    url("../fonts/Manrope-Medium.woff") format("woff");
+  src: local("EuclidCircularB-Medium"),
+    url("../fonts/EuclidCircularB-Medium.woff2") format("woff2"),
+    url("../fonts/EuclidCircularB-Medium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Manrope";
+  font-family: "EuclidCircularB";
   font-weight: 600;
-  src: local("Manrope-SemiBold"),
-    url("../fonts/Manrope-SemiBold.woff2") format("woff2"),
-    url("../fonts/Manrope-SemiBold.woff") format("woff");
+  src: local("EuclidCircularB-SemiBold"),
+    url("../fonts/EuclidCircularB-SemiBold.woff2") format("woff2"),
+    url("../fonts/EuclidCircularB-SemiBold.woff") format("woff");
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Manrope";
+  font-family: "EuclidCircularB";
   font-weight: 700;
-  src: local("Manrope-Bold"), url("../fonts/Manrope-Bold.woff2") format("woff2"),
-    url("../fonts/Manrope-Bold.woff") format("woff");
+  src: local("EuclidCircularB-Bold"), url("../fonts/EuclidCircularB-Bold.woff2") format("woff2"),
+    url("../fonts/EuclidCircularB-Bold.woff") format("woff");
   font-display: swap;
 }
 
