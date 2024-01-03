@@ -18,6 +18,18 @@ inputPhones.forEach((elem, index) => {
   IMask(elem, maskOptions)
 })
 
+var myModalEl = document.getElementById('exampleModal')
+myModalEl.addEventListener('hide.bs.modal', function (event) {
+  sendObject = {
+    type: '',
+    ls: 0,
+    phone: '',
+  }
+  inputPersonalAccount.value = ''
+  inputPhone.value = ''
+  searcInfoBlock.style.display = 'none'
+})
+
 let headerNav = document.querySelector('.header-nav')
 let listLinkNav = document.querySelectorAll('.header-nav ul a')
 let headerBurger = document.querySelector('.header-burger')
@@ -63,6 +75,7 @@ async function searchData(e) {
   })
     .then((data) => data.json())
     .then((data) => {
+      searcInfoBlock.style.display = 'block'
       console.log(data)
       if (data.code == 404) {
         searcInfoBlock.innerHTML = data.message
