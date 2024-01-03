@@ -65,6 +65,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "5.2.3",
+    "imask": "^7.3.0",
     "jquery": "^3.6.4",
     "multipipe": "^4.0.0",
     "photoswipe": "^5.3.6",
