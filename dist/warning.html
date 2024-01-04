@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b345f0b0-60da-47eb-8188-9ee58f8dcfc3&amp;lang=ru_RU"></script> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Аренда транспорта</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+  <link rel="manifest" href="static/site.webmanifest">
+</head>
+
+  <body class="page">
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="d-flex align-items-center gap-30">
+        <img src="../images/Frame 127.svg" alt="">
+        <div class="fs-14 fw-normal d-none d-xl-flex gap-15"><span>|</span>Процессинг аренды транспорта</div>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <!-- <li><a href="#portfolio">работы</a></li> -->
+          <li><a href="services.html">Онлайн-оплата</a></li>
+          <!-- <li><a href="good.html">RU</a></li> -->
+        </ul>
+      </nav>
+      <div class="header-nav__overflow"></div>
+      <div class="header-burger header__burger">
+        <div class="header-burger__open-icon">
+          <img src="../images/icons.svg" alt="">
+        </div>
+        <div class="header-burger__close-icon">
+          <img src="../images/icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <main>
+      <section style="padding: 100px; text-align: center">
+        <h3>НЕ УДАЛОСЬ СОВЕРШИТЬ ОПЛАТУ</h3>
+        <h5><a href="/">Вернуться на главную и попробовать снова</a></h5>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="border-bottom border-muted border-top pt-lg-40 py-15">
+    <div class="container">
+      <div class="d-flex gap-10 flex-wrap flex-xl-nowrap justify-content-between">
+        <div class="d-flex d-lg-block justify-content-center wp-100 wp-lg-20">
+          <img src="../images/logonew.svg" alt="">
+          <p class="fs-14 d-none d-lg-inline-block mt-15">
+            Процессинг аренды транспорта
+          </p>
+        </div>
+        <div class="fs-12 fs-md-14 wp-45 wp-lg-20">
+          ООО «А7»<br>
+          ОГРН 1197746557821<br>
+          ИНН 9704001134<br>
+          КПП 770401001
+        </div>
+        <div class="fs-12 fs-md-14 wp-45 wp-lg-20">
+          119034, город Москва,<br>
+          Кропоткинский пер, д. 14
+        </div>
+        <div class="fs-12 fs-md-14 wp-45 wp-lg-20">
+          РС 40702810301500149897<br>
+          ООО "Банк Точка"<br>
+          КС 30101810745374525104<br>
+          БИК 044525104
+        </div>
+        <div class="wp-lg-20 wp-45">
+          <a href="tel:+7(495)138-28-60" class="fw-semi-bold fs-18 fs-md-24">
+            +7 (495) 138-28-60
+          </a>
+          <div class="d-flex gap-10">
+            <img src="../images/mail.svg" alt="">
+            <a href="mailto:support@dep.rent" class="fs-14 fs-md-16">support@dep.rent</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-15 pb-15 pb-lg-40">
+    <div class="d-flex flex-wrap fs-12 fs-lg-14 justify-content-around justify-content-lg-between text-decoration-underline text-link-color-ser">
+      <a href="" class="text-link-color-ser">Публичная оферта</a>
+      <a href="" class="text-link-color-ser">Политика конфиденциальности</a>
+      <a href="" class="text-link-color-ser">2023 г. Все права защищены</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fade modal" id="clientPaymentForm" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="border-0 bg-transparent modal-content">
+      <form class="bg-white form-modal pt-45 px-50 rounded-10" action="https://paymaster.ru/payment/init">
+        <p class="mb-20 text-black fs-24 fw-semi-bold text-center">Онлайн оплата клиентом</p>
+
+        <div class="end-15 position-absolute top-15" data-bs-dismiss="modal" aria-label="Close">
+          <img src="../images/x.svg" alt="">
+        </div>
+        <div class="d-flex gap-10 flex-column mb-20 text-black">
+          <span class="fs-14 fw-normal">Номер лицевого счета (указан в договоре аренды)</span>
+          <input type="text" data-name="ls" data-type="client" class="border-0 bg-opposite fs-20 px-30 py-20 rounded-5 wp-100 input-personal-account">
+        </div>
+        <div class="d-flex gap-10 flex-column mb-20 text-black">
+          <span class="fs-14 fw-normal">Мой личный телефон в системе</span>
+          <input type="text" data-name="phone" data-type="client" class="border-0 bg-opposite fs-20 px-30 py-20 rounded-5 wp-100 input-phone">
+        </div>
+        <div class="mb-20 text-black fs-12 px-15 py-5 rounded-5 search-info-block" style="display: none; background: rgba(12, 115, 254, 0.1)"></div>
+        <input type="text" name="LMI_CURRENCY" value="RUB" hidden>
+        <input type="text" name="LMI_MERCHANT_ID" value="a8bd5dcb-4b73-4870-9981-f07ba2d8d41a" hidden>
+        <input type="text" name="LMI_PAYMENT_DESC" value="Оплата клиентом" hidden>
+        <input type="text" name="LMI_PAYMENT_AMOUNT" value="0" hidden>
+        <input type="text" name="PAYMENT_TYPE" value="client" hidden>
+        <input type="text" name="PAYMENT_CLIENT_ID" value="" hidden>
+        <input type="text" name="PAYMENT_COMPANY_ID" value="" hidden>
+        <div class="success"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="fade modal" id="companyPaymentForm" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="border-0 bg-transparent modal-content">
+      <form class="bg-white form-modal pt-45 px-50 rounded-10" action="https://paymaster.ru/payment/init">
+        <p class="mb-20 text-black fs-24 fw-semi-bold text-center">Онлайн оплата пользователя CRM</p>
+
+        <div class="end-15 position-absolute top-15" data-bs-dismiss="modal" aria-label="Close">
+          <img src="../images/x.svg" alt="">
+        </div>
+        <div class="d-flex gap-10 flex-column mb-20 text-black">
+          <span class="fs-14 fw-normal">Номер лицевого счета компании (указан в шапке CRM)</span>
+          <input type="text" data-name="ls" data-type="company" class="border-0 bg-opposite fs-20 px-30 py-20 rounded-5 wp-100 input-personal-account">
+        </div>
+        <div class="d-flex gap-10 flex-column mb-20 text-black">
+          <span class="fs-14 fw-normal">Мой личный телефон в системе</span>
+          <input type="text" data-name="phone" data-type="company" class="border-0 bg-opposite fs-20 px-30 py-20 rounded-5 wp-100 input-phone">
+        </div>
+        <div class="mb-20 text-black fs-12 px-15 py-5 rounded-5 search-info-block" style="display: none; background: rgba(12, 115, 254, 0.1)"></div>
+        <input type="text" name="LMI_CURRENCY" value="RUB" hidden>
+        <input type="text" name="LMI_MERCHANT_ID" value="a8bd5dcb-4b73-4870-9981-f07ba2d8d41a" hidden>
+        <input type="text" name="LMI_PAYMENT_DESC" value="Оплата компанией" hidden>
+        <input type="text" name="LMI_PAYMENT_AMOUNT" value="0" hidden>
+        <input type="text" name="PAYMENT_TYPE" value="company" hidden>
+        <input type="text" name="PAYMENT_CLIENT_ID" value="1" hidden>
+        <input type="text" name="PAYMENT_COMPANY_ID" value="" hidden>
+        <div class="success"></div>
+      </form>
+    </div>
+  </div>
+</div>
+ <script src="js/app.min.js"></script>
+
+  </body>
+</html>
