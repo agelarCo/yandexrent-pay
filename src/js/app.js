@@ -44,7 +44,7 @@ async function checkAuth(e) {
   sendObject[e.target.dataset.name] = e.target.value;
   sendObject.type = e.target.dataset.type;
   const modal = getModalByEvent(e);
-  fetch('http://api.yandexrent.development/payment/auth', {
+  fetch('https://api.yandex-rent.ru/payment/auth', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
