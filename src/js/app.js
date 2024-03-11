@@ -108,7 +108,7 @@ function getModalByEvent(event) {
   return modal;
 }
 
-const debouncedSearchData = debounce(checkAuth, 1000);
+const debouncedSearchData = debounce(checkAuth, 500);
 
 const modals = document.querySelectorAll('.modal');
 
