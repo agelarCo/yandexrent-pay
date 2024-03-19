@@ -70,7 +70,7 @@ async function checkAuth(e) {
           modal.querySelector('[name="PAYMENT_CLIENT_ID"]').value = data.data.client_id;
 
           let str = `${data.data.client_name} (баланс ${data.data.client_balance})<br>
-          ${data.data.company_name}<br>`;
+          Зачисление на Лицевой Счет №${data.data.client_id} в ${data.data.company_name}<br>`;
           modal.querySelector('.search-info-block').innerHTML = str;
         }
         modal.querySelector('.search-info-block').style.display = 'block';
