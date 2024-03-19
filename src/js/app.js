@@ -89,8 +89,8 @@ function showFormPartOnSuccessAuth(modal) {
         </div>
 
         <select class="classic wp-100 mb-20 paymentType" name="LMI_PAYMENT_METHOD" data-action="changeTotal">
-          <option value="bankcard" selected>Оплата картой (комиссия 3,3%)</option>
           <option value="sbp">СБП (комиссия 1,9%)</option>
+          <option value="bankcard" selected>Оплата картой (комиссия 3,3%)</option>
         </select>
         <p class="text-center fw-bold fs-14 mb-20 text-black">Итого с учетом комиссии: <span class="paymentTotal">0</span> руб.</p>
         <div class="d-flex justify-content-center">
